@@ -3,7 +3,10 @@ import wordRoutes from './src/routes/wordR'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
 
-require('dotenv').config()
+if (!process.env.heroku) {
+  require('dotenv').config()
+}
+
 
 const app = express()
 const PORT = process.env.PORT || 5000
