@@ -2,6 +2,7 @@ import express from 'express'
 import wordRoutes from './src/routes/wordR'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
+import cors from 'cors'
 
 if (!process.env.heroku) {
   require('dotenv').config()
@@ -32,6 +33,8 @@ app.use(
 app.use(
   bodyParser.json()
 )
+
+app.use(cors())
 
 wordRoutes(app)
 
