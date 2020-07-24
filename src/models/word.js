@@ -4,26 +4,26 @@ const Schema = mongoose.Schema
 
 export const WordSchema = new Schema(
   {
-    Page: {
+    page: {
       type: Number,
       index: true
     },
+    image: String,
     English: {
-      Spell: String,
-      Audio: String
+      spell: String,
+      audio: String
     },
     Chinese: {
-      Spell: String,
-      Audio: String
+      spell: String,
+      audio: String
     },
     French: {
-      Spell: String,
-      Audio: String
+      spell: String,
+      audio: String
     },
     German: {
-      Spell: String,
-      Audio: String
-    },
-    Image: String
+      spell: String,
+      audio: String
+    }
   }
 )

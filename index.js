@@ -39,7 +39,7 @@ app.use(cors())
 wordRoutes(app)
 
 app.get('/', (req, res) => {
-  res.send("hello french")
+  res.send("Happy Language API")
 })
 
 app.listen(PORT, () => {

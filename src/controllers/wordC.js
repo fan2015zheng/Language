@@ -22,7 +22,7 @@ export const findAllWords = (req, res) => {
 
 export const findWordsByPage = (req, res) => {
   Word.find(
-    {Page: req.params.page}, 
+    {page: req.params.page}, 
     (err, words) =>{
       res.json(words)
     }
