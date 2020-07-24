@@ -15,6 +15,7 @@ export const WordSchema = new Schema(
     },
     Chinese: {
       spell: String,
+      pinyin: String,
       audio: String
     },
     French: {
