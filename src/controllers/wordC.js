@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import {WordSchema} from '../models/word'
 
-const Word = mongoose.model('Word', WordSchema, 'Words')
+const Word = mongoose.model('Word', WordSchema, 'words')
 
 export const addWord = (req, res) => {
   let word = new Word(req.body)
