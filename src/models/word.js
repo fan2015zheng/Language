@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 export const WordSchema = new Schema(
   {
     page: {
-      type: Number,
+      type: String,
       index: true
     },
     image: String,
