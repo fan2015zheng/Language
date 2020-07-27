@@ -8,23 +8,11 @@ export const WordSchema = new Schema(
       type: String,
       index: true
     },
-    image: String,
-    English: {
-      spell: String,
-      audio: String
-    },
-    Chinese: {
-      spell: String,
-      pinyin: String,
-      audio: String
-    },
-    French: {
-      spell: String,
-      audio: String
-    },
-    German: {
-      spell: String,
-      audio: String
-    }
+    key: String,
+    English: String,
+    Chinese: String,
+    Pinyin: String,
+    French: String,
+    German: String,
   }
 )
