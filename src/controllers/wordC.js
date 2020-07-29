@@ -4,8 +4,6 @@ import {WordSchema} from '../models/word'
 const Word = mongoose.model('Word', WordSchema, 'words')
 
 export const addWord = (req, res) => {
-  let word = new Word(req.body)
- 
   Word.collection.insert(req.body, (err, words) => {
     if(!err) {
       res.json({"success": true})
@@ -13,9 +11,10 @@ export const addWord = (req, res) => {
   })
 }
 
-export const findAllWords = (req, res) => {
+export const findWordsByPagePattern = (req, res) => {
+
   Word.find(
-    {}, 
+    {page: {$regex: new RegExp("^"+req.params.lesson)}}, 
     (err, words) => {
       res.json(words)
     }
