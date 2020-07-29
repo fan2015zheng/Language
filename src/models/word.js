@@ -14,5 +14,6 @@ export const WordSchema = new Schema(
     Pinyin: String,
     French: String,
     German: String,
+    admin: Number
   }
 )

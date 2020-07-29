@@ -1,6 +1,6 @@
 import {
   addWord,
-  findWordsByPagePattern,
+  findWordsByLesson,
   findWordsByPage
 } from '../controllers/wordC'
 
@@ -8,7 +8,7 @@ const routes = (app) => {
   
   app.route('/word').post(addWord)
 
-  app.route('/lesson/:lesson').get(findWordsByPagePattern)
+  app.route('/lesson/:lesson').get(findWordsByLesson)
   
   app.route('/words/:page').get(findWordsByPage)
 
