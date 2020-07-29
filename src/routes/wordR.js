@@ -5,7 +5,8 @@ import {
 } from '../controllers/wordC'
 
 const routes = (app) => {
-  //app.route('/word').post(addWord)
+  
+  app.route('/word').post(addWord)
 
   //app.route('/words').get(findAllWords)
   

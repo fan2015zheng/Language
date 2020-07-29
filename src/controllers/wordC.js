@@ -5,9 +5,11 @@ const Word = mongoose.model('Word', WordSchema, 'words')
 
 export const addWord = (req, res) => {
   let word = new Word(req.body)
-  
-  word.save((err, word2) => {
-    res.json(word2)
+ 
+  Word.collection.insert(req.body, (err, words) => {
+    if(!err) {
+      res.json({"success": true})
+    }
   })
 }
 
